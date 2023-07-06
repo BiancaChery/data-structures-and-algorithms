@@ -11,6 +11,16 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 const addOne = (arr) => {
   // Solution code here...
 };
+let arr = [2, 2, 4, 6];
+
+let addOneToArray = (arr) => {
+  let arr2 =[];
+  for (let n of arr){
+    arr.push(n + 1);
+  }
+  return arr2;
+}
+console.log(addOneToArray(arr));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
