@@ -8,6 +8,14 @@ Write a function called addTwo that takes in an array and adds two to every valu
 
 const addTwo = (arr) => {
   // Solution code here...
+  let arr1 = [1, 2, 3, 4, 5, 6];
+  let arrResult1 = [];
+
+  for (let n of arr1) {
+    let result = Math.pow(2, n);
+    arrResult1.push(result);
+  }
+  console.log("Powers of 2", arrResult1)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -20,6 +28,14 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 
 const typeNum = (arr) => {
   // Solution code here...
+  let arr2 = [1, 'James', 'Bo', 4, 7, 9];
+  let arrResult2 = [];
+  for(let n of arr2) {
+    if(typeNum(n)) {
+      arrResult2.push(n)
+    }
+  }
+  console.log("filter", arrResult2)
 };
 
 /* ------------------------------------------------------------------------------------------------

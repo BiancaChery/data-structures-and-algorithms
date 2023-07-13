@@ -10,6 +10,8 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 
 const raisedToTheThird = (arr) => {
   // Solution code here...
+  let arr1 = [1, 2, 3, 4, 5, 6];
+  let arrResult1
 };
 
 /* ------------------------------------------------------------------------------------------------
