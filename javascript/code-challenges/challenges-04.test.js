@@ -23,8 +23,15 @@ function lower(str) {
 
 const updateAnimal = (arr, callback) => {
   // Solution code here...
+  let str = callback(arr, "upper")
+    return str.toUpperCase()
 };
 
+const updateAnimal = (arr, callback) => {
+  // Solution code here...
+  let str = callback(arr, "lower")
+    return str.toLowerCase()
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -35,7 +42,15 @@ For example: 'Cat' would come before 'apple'
 
 const sortNames = (arr) => {
   // Solution code here...
-};
+  let nameX = x.name
+  let nameY = y.name
+
+  if (nameX < nameY) {
+    return -1;
+  }
+}; else (nameX > nameY) {
+  return +1;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -47,6 +62,7 @@ HINT: Beware... JS default is "Lexical" ordering.
 
 const sortNumbers = (arr) => {
   // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
