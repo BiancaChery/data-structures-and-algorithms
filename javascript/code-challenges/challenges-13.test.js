@@ -8,6 +8,19 @@ Write a function named longestString that takes in an array of strings and retur
 
 const longestString = (arr) => {
 // Solution code here...
+  if (!Array.isArray(arr) || arr.length === 0) {
+    return -1;
+  }
+  let longestIndex = 0;
+  let longestLength = arr[0].length;
+
+  for (let i = 1; i <arr.length; i++) {
+    if (arr[i].length > longestLength) {
+      longestIndex = i;
+      longestLength = arr[i].length;
+    }
+  }
+  return longestIndex;
 };
   
 /* ------------------------------------------------------------------------------------------------
@@ -20,6 +33,11 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   // Solution code here...
+  if (!Array.isArray(arr)) {
+    return [];
+  }
+  const firstLetterArray = arr.map(arr => arr.charAt(0));
+  return firstLetterArray
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,6 +50,8 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   // Solution code here...
+  const happyArray = inputArray.filter(arr => arr.includes(":)"));
+  return happyArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,6 +64,17 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+  const standardizedNumbers = phoneNumbers.map(phoneNumber => {
+    const numericOnly = phoneNumber.replace(/\D/g, "");
+    
+    if (numericOnly.length === 10) {
+        return numericOnly;
+    } else {
+        console.log(`Invalid phone number format: ${phoneNumber}`);
+        return phoneNumber; // Return original if not in (XXX) XXX-XXXX format
+    }
+});
+  return standardizedNumbers;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -56,6 +87,11 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  let result = "";
+  for (let i = 0; i < inputString.length; i += 2) {
+      result += inputString[i];
+  }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,6 +102,7 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  return inputArray.every(arr => arr.includes(":)"));
 };
 
 /* ------------------------------------------------------------------------------------------------
